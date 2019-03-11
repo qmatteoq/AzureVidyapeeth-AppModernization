@@ -61,8 +61,13 @@
 
         <TextBlock Text="Choose a date:" FontSize="16" FontWeight="Bold" Grid.Row="6" Grid.Column="0" />
         
+        
         <xamlhost:WindowsXamlHost InitialTypeName="Windows.UI.Xaml.Controls.CalendarView" Grid.Column="1" Grid.Row="6" Margin="5, 0, 0, 0" x:Name="CalendarUwp"
                                   ChildChanged="CalendarUwp_ChildChanged" />
+        
+        <!-- if you want to use the custom wrapper, uncomment the following control and comment the previous WindowsXamlHost one -->
+        <!--<local:CalendarViewWrapper x:Name="CalendarUwp" Grid.Column="1" Grid.Row="6" Margin="5, 0, 0, 0" 
+                                   SelectedDatesChanged="CalendarUwp_SelectedDatesChanged"/>-->
 
         <TextBlock Text="Selected date:" FontSize="16" FontWeight="Bold" Grid.Row="7" Grid.Column="0" />
         <TextBlock x:Name="txtDate" FontSize="16" Grid.Row="7" Grid.Column="1" />

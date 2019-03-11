@@ -72,7 +72,7 @@ namespace ContosoExpenses
                 calendarView.SelectedDatesChanged += (obj, args) =>
                 {
                     if (args.AddedDates.Count > 0)
-                {
+                    {
                         SelectedDate = args.AddedDates.FirstOrDefault().DateTime;
                         txtDate.Text = SelectedDate.ToShortDateString();
                     }
@@ -86,6 +86,15 @@ namespace ContosoExpenses
         private void Window_Closed(object sender, EventArgs e)
         {
             CalendarUwp.Dispose();
+        }
+
+        private void CalendarUwp_SelectedDatesChanged(object sender, SelectedDatesChangedEventArgs e)
+        {
+            if (e.SelectedDates.Count > 0)
+            {
+                SelectedDate = e.SelectedDates.FirstOrDefault().DateTime;
+                txtDate.Text = SelectedDate.ToShortDateString();
+            }
         }
     }
 }
