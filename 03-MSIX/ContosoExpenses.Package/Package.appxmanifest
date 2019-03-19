@@ -7,12 +7,12 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="9694537a-76b7-47fa-b1aa-70263a0df60e"
+    Name="ContosoExpenses"
     Publisher="CN=mpagani"
     Version="1.0.0.0" />
 
   <Properties>
-    <DisplayName>ContosoExpenses.Package</DisplayName>
+    <DisplayName>Contoso Expenses</DisplayName>
     <PublisherDisplayName>mpagani</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
